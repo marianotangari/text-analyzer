@@ -16,10 +16,11 @@ public class ResponseBodyDTO {
     @JsonProperty("textLength")
     TextLengthDTO textLength;
 
+    @JsonProperty("wordCount")
+    Integer wordCount;
+
     @JsonProperty("characterCount")
     List<Map<Character, Integer>> characterCount;
 
-    @JsonProperty("wordCount")
-    Integer wordCount;
 
 }

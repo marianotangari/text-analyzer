@@ -80,7 +80,7 @@ public class TestAnalyzerService {
 
         //Adding special characters should not affect the characterCount list.
         request.setText("hello 2 times  ((()/%$#!)))");
-        response.setWordCount(4);
+        response.setWordCount(3);
         response.getTextLength().setWithSpaces(27);
         response.getTextLength().setWithoutSpaces(23);
         ResponseEntity<ResponseBodyDTO> responseEntity = new ResponseEntity<>(response, HttpStatus.OK);
