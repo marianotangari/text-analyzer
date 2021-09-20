@@ -21,14 +21,12 @@ public class AnalyzerServiceImpl implements AnalyzerService{
 
         //This regex removes all special characters except whitespaces
         String sanitizedText = originalText.replaceAll("[^a-zA-Z0-9\\s+]","");
-        System.out.println(sanitizedText);
 
         //We split the sanitized text into a string array using spaces as division.
         String[] splitText = sanitizedText.trim().split("\\s+");
 
         //This regex removes all spaces (even consecutive ones) and numbers
         String trimmedText = sanitizedText.replaceAll("[\\d\\s+]","");
-        System.out.println(trimmedText);
 
         TextLengthDTO textLengthDTO = new TextLengthDTO(originalText.length(), originalText.replaceAll("\\s+","").length());
 
