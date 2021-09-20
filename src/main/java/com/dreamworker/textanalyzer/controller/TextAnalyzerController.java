@@ -28,13 +28,11 @@ public class TextAnalyzerController {
 
         } catch (NullPointerException e){
 
-            return new ResponseEntity<>(
-                    new ErrorDTO(400, "Bad Request: Something is wrong with the request body"), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>(new ErrorDTO(400, "Bad Request: Something is wrong with the request body"), HttpStatus.BAD_REQUEST);
 
         } catch (Exception e){
 
-            return new ResponseEntity<>(
-                    new ErrorDTO(500, "Internal Server Error"), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>(new ErrorDTO(500, "Internal Server Error"), HttpStatus.BAD_REQUEST);
 
         }
     }
